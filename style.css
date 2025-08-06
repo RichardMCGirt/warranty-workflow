@@ -53,12 +53,28 @@ h1 {
   margin: auto;
 }
 
+.workflow-branch-container .workflow-box {
+  background-color: #f0f8ff; /* Light blue for visibility */
+  border: 2px solid #000;
+  border-radius: 20px; /* Curved rectangle shape */
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+  max-width: 300px;
+  min-height: 140px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  font-size: 15px;
+}
+
 /* Branch container */
 .workflow-branch-container {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: nowrap; /* Keep it on one row */
 }
 
 /* If space allows, use side-by-side for branches */
@@ -80,6 +96,16 @@ h1 {
     margin: 0;
     padding: 0.5in;
     font-size: 12px;
+  }
+
+   .workflow-branch-container {
+    flex-wrap: wrap;
+  }
+
+  .workflow-branch-container .workflow-box {
+    max-width: 32%;
+    font-size: 13px;
+    padding: 12px;
   }
    .arrow.branching svg {
     width: 120px;   /* or adjust as needed */
