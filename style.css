@@ -81,14 +81,18 @@ h1 {
     padding: 0.5in;
     font-size: 12px;
   }
+   .arrow.branching svg {
+    width: 120px;   /* or adjust as needed */
+    height: 60px;
+  }
 
   .workflow-box {
     page-break-inside: avoid;
   }
 
   .arrow svg {
-    width: 16px;
-    height: 16px;
+    width: 26px;
+    height: 26px;
   }
 
   img {
