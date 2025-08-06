@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Warranty Workflow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Warranty</h1>
+
+  <div class="workflow-container">
+    <div class="workflow-box">
+      <p>Admin fills out warranty form<br><small>(from Corporate Help Desk)</small></p>
+    </div>
+     <div class="form-screenshot">
+      <img src="Warrantyform.png" alt="Warranty Form Screenshot">
+    </div>
+
+<div class="arrow jump">
+  <svg width="24" height="24" viewBox="0 0 24 24">
+    <path d="M12 4v16M5 13l7 7 7-7" stroke="black" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+    <div class="workflow-box">
+      <p>Admin then schedules time that works for the homeowner of builder<br><strong>(Pending)</strong></p>
+    </div>
+
+<div class="arrow jump">
+  <svg width="24" height="24" viewBox="0 0 24 24">
+    <path d="M12 4v16M5 13l7 7 7-7" stroke="black" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>    
+
+    <div class="workflow-box">
+      <p>Technician is then assigned and goes out to the house<br><strong>(Field Tech Review Needed)</strong></p>
+    </div>
+            <div class="form-screenshot">
+      <img src="index.png" alt="Warranty Form Screenshot">
+    </div>
+<div class="arrow jump">
+  <svg width="24" height="24" viewBox="0 0 24 24">
+    <path d="M12 4v16M5 13l7 7 7-7" stroke="black" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+
+     <div class="workflow-box">
+      <p>Technician fills out the portal selecting a subcontractor is needed and the payment. They also decide if it is billable and any materials need to be ordered. Finally they upload images and check Field Tech Reviewed 
+<br><strong>(Field Tech Review Needed)</strong></p>
+    </div>
+
+<!-- Arrow indicating split -->
+<div class="arrow branching">
+  <svg width="120" height="60" viewBox="0 0 120 60">
+    <!-- Vertical line -->
+    <path d="M60 0 V25" stroke="black" stroke-width="2" fill="none"/>
+    
+    <!-- Left branch -->
+    <path d="M60 25 L30 55" stroke="black" stroke-width="2" fill="none"/>
+    
+    <!-- Center branch (continues down) -->
+    <path d="M60 25 L60 55" stroke="black" stroke-width="2" fill="none"/>
+    
+    <!-- Right branch -->
+    <path d="M60 25 L90 55" stroke="black" stroke-width="2" fill="none"/>
+  </svg>
+</div>
+
+
+<!-- Workflow branching paths -->
+<div class="workflow-branch-container">
+  <div class="workflow-box">
+    <p>If job is <strong>not billable</strong> and <strong>materials are needed</strong><br>Status becomes:<br><strong>Material Purchase Needed</strong></p>
+  </div>
+
+  <div class="workflow-box">
+    <p>If job <strong>is billable</strong> and <strong>materials or subcontractor</strong> are needed<br>Status becomes:<br><strong>Customer Review Needed</strong></p>
+  </div>
+
+  <div class="workflow-box">
+    <p>If <strong>no materials</strong> are needed and job is <strong>non-billable</strong><br>Status becomes:<br><strong>Scheduled - Awaiting Field</strong></p>
+  </div>
+</div>
+
+  <div class="form-screenshot">
+      <img src="scheduled.png" alt="Warranty Form Screenshot">
+    </div>
+</div>
+
+ <div class="workflow-container">
+  <div class="workflow-box">
+    <p>Once job is completed, the field tech logs in, navigates to Scheduled - Awaiting Field, adds pictures, updates the subcontractor, payment amount, vendor if needed, and checks Job Completed.</p>
+  </div>
+
+<div class="arrow jump">
+  <svg width="24" height="24" viewBox="0 0 24 24">
+    <path d="M12 4v16M5 13l7 7 7-7" stroke="black" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+  <div class="workflow-box">
+    <p>Next, admin reaches out again to schedule a follow-up appointment. Either the field tech or subcontractor goes to fix the house.<br><strong>Status: Scheduled - Awaiting Field</strong></p>
+  </div>
+
+<div class="arrow jump">
+  <svg width="24" height="24" viewBox="0 0 24 24">
+    <path d="M12 4v16M5 13l7 7 7-7" stroke="black" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+  <div class="workflow-box">
+    <p>If a subcontractor was needed, the status goes to <br><strong>Subcontractor To Pay</strong></p>
+  </div>
+
+<div class="arrow jump">
+  <svg width="24" height="24" viewBox="0 0 24 24">
+    <path d="M12 4v16M5 13l7 7 7-7" stroke="black" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+  <div class="workflow-box">
+    <p>Finally, if it was billable, the status goes to <br><strong>Ready To Invoice</strong></p>
+  </div>
+</div>
+
+
+
+   
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
