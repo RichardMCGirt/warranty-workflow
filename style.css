@@ -1,144 +1,103 @@
+/* Base styles */
 body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  padding: 20px;
-  text-align: center;
-  max-width: 800px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 780px;
   margin: auto;
+  padding: 20px;
+  color: #222;
+  background-color: white;
 }
 
 h1 {
+  text-align: center;
+  font-size: 28px;
   margin-bottom: 30px;
-  font-size: 1.8rem;
 }
 
 .workflow-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
 }
-
 
 .workflow-box {
-  background-color: #000;
-  color: #fff;
-  padding: 14px 18px;
-  border-radius: 16px;
-  margin: 8px 0;
-  max-width: 100%;
-  text-align: center;
-  font-size: 0.95rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.workflow-box small {
-  font-size: 0.85em;
-  color: #ccc;
-}
-
-.arrow {
-  font-size: 1.8rem;
-  margin: 4px 0;
-}
-
-.arrow.jump {
-  transform: translateY(-5px);
-}
-
-.form-screenshot {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
   margin: 10px 0;
-  width: 40%;
+  width: 100%;
+  background: #f9f9f9;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
 }
-.arrow {
+
+.workflow-box p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.form-screenshot img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+.arrow.jump,
+.arrow.branching {
+  margin: 10px 0;
+}
+
+/* Arrow spacing */
+.arrow svg {
+  display: block;
+  margin: auto;
+}
+
+/* Branch container */
+.workflow-branch-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 12px 0;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
 }
 
-.arrow.jump svg {
-  width: 32px;
-  height: 32px;
-}
-
-@media print {
-  body {
-    background: #fff;
-    color: #000;
-    padding: 0.5in;
-    margin: 0;
-    font-size: 11pt;
-    max-width: 100%;
-  }
-
-  h1 {
-    font-size: 18pt;
-    margin-bottom: 24px;
-    text-align: center;
-  }
-
-  .workflow-container {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
+/* If space allows, use side-by-side for branches */
+@media print, screen and (min-width: 768px) {
+  .workflow-branch-container {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .workflow-box {
-    background: none;
-    color: #000;
-    border: 1px solid #000;
-    box-shadow: none;
-    border-radius: 4px;
-    padding: 10px;
-    margin: 8px 0;
-    text-align: left;
+    flex: 1;
+    margin: 0 5px;
+  }
+}
+
+/* Print-specific adjustments */
+@media print {
+  body {
+    margin: 0;
+    padding: 0.5in;
+    font-size: 12px;
+  }
+
+  .workflow-box {
     page-break-inside: avoid;
   }
 
-  .workflow-branch-container {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  .arrow svg {
+    width: 16px;
+    height: 16px;
   }
 
-  .workflow-branch-container .workflow-box {
-    margin: 4px 0;
-  }
-
-  .arrow, .arrow.jump, .arrow.branching {
-    display: flex;
-    justify-content: center;
-    margin: 8px 0;
-  }
-
-  .arrow svg, .arrow.jump svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  .form-screenshot {
-    display: none;
+  img {
+    max-height: 200px;
+    object-fit: contain;
   }
 
   @page {
-    size: A4;
+    size: A4 portrait;
     margin: 0.5in;
   }
-}
-
-.arrow.branching {
-  font-size: 2rem;
-  margin: 10px 0;
-  display: block;
-  text-align: center;
-}
-
-.workflow-box {
-  width: 100%;
-  max-width: 600px;
 }
